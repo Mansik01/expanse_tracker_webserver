@@ -15,10 +15,13 @@ router.get("/health", (req, res) => {
 
 // Mongoose connection
 mongoose
-  .connect(process.env.MONGODB_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
+  .connect(
+    "mongodb+srv://mayurmaskar007:hbasRIjquwegs0ae@cluster0.qvsxr.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    }
+  )
   .then(() => {
     console.log("Connected to database");
   })
